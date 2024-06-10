@@ -3,8 +3,12 @@
 {% block title %}page2{% endblock %}
 
 {% block content %}
-  <h1>This is Page 2</h1>
 
-<p>Lorem ipsum</p>
+{% if logged_in %}
+         {{session['user_data']['login']}}
+         {{session['user_data']['followers']}}
+         {{session['user_data']['email']}}
+         {{session['user_data']['company']}}
+	{% endif %}
 
 {% endblock %}
